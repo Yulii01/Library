@@ -1,0 +1,32 @@
+
+<div ng-controller="Find">
+  <p>Ordenados por titulos<p>
+    <ul>
+      <li ng-repeat= "snkChar in read | orderBy: title">
+        {{snkCha.title}} 
+      </li>
+    </ul>
+  </div> 
+
+
+  <table>
+  <thead>
+    
+    <thead>
+      <tbody *ngFor= "let snkChar of read">
+        <tr>
+          <td scope="row">{{snkChar.bookId}} </td>
+           <td>{{snkChar.title}}</td>
+          <td>{{snkChar.authors}}</td>
+          <td>{{snkChar.editorial}}</td>
+          <td>{{snkChar.short_description}}</td>
+          <td> </td>
+        </tr>
+      </tbody>
+    <table>
+      <router-outlet> </router-outlet>
+
+    
+
+
+              
