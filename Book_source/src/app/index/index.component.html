@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Books</h1>
+    <div class="form-group">
+    
+      <input
+      type="text"
+      class="forms-control"
+      placeholder="Buscar.."
+      [(ngModel)]="filterpost"
+      name="filterpost"
+    />
+  </div>
+  <div class="container">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Title</th>
+          <th>Authors</th>
+          <th>Editorial</th>
+          <th> Short_description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let snkChar of read | source:filterpost" >
+            <a routerLink='/seleccion/{{snkChar.bookId}}'>
+                {{snkChar.bookId}}
+              </a>
+            <td>{{snkChar.title}}</td>
+           <td>{{snkChar.authors}}</td>
+           <td>{{snkChar.editorial}}</td>
+           <td>{{snkChar.short_description}}</td>
+          
+          </tr>
+      
+      </tbody>
+    </table>
+  
+    
+  </div>
+ 
+  
+  
+  
+                
